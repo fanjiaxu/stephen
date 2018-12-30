@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.p1{
+	width:100px;
+	height:75px;
+	background-color:orangered;
+	border-radius: 20px;
+	border:2px solid ;
+     line-height: 75px;
+}
+div{
+	   text-align:center;  
+	   vertical-align:75px;
+}
+</style>
+<script>
+
+	var x,y,n=0,ny=0,rotINT,rotYINT
+	function rotateDIV()
+	{
+		x=document.getElementById("div01")
+		clearInterval(rotINT)
+		rotINT=setInterval("startRotate()",1)
+	}
+	function rotateYDIV()
+	{
+		y=document.getElementById("div02")
+		clearInterval(rotYINT)
+		rotYINT=setInterval("startYRotate()",1)
+	}
+	function startRotate()
+	{
+		n=n+1
+		x.style.transform="rotate(" + n + "deg)"
+		x.style.webkitTransform="rotate(" + n + "deg)"
+		x.style.OTransform="rotate(" + n + "deg)"
+		x.style.MozTransform="rotate(" + n + "deg)"
+		if (n==180 || n==360)
+		{
+			clearInterval(rotINT)
+			if (n==360){n=0}
+		}
+	}
+	function startYRotate()
+	{
+		ny=ny+1
+		y.style.transform="rotateY(" + ny + "deg)"
+		y.style.webkitTransform="rotateY(" + ny + "deg)"
+		y.style.OTransform="rotateY(" + ny + "deg)"
+		y.style.MozTransform="rotateY(" + ny + "deg)"
+		if (ny==180 || ny>=360)
+		{
+			clearInterval(rotYINT)
+			if (ny>=360){ny=0}
+		}
+	}
+</script>
+</head>
+<body>
+	<div>
+	<p id="div01" onclick="rotateDIV()" class="p1" >2D旋转</p>
+	<p id="div02" onclick="rotateYDIV()" class="p1">3D旋转</p>	
+	</div>
+
+</body>
+
+</html>
