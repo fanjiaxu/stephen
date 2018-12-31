@@ -1,0 +1,33 @@
+body{margin: 0px;}
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding: 5px;
+	border: #000000;
+	font-size: 20px;
+}
+#nav {
+    line-height:50px;
+    background-color:#EEEEEE;
+    height:650px;
+    width:100px;
+    float:left;
+     padding:5px;
+}
+#section {
+   
+     text-align: center;
+      padding:10px;	 
+ }
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+     font-size: large;
+	 font-style: italic;";
+   	 padding: 5px;
+}
+.style{
+	border-radius: 24px;
+}
